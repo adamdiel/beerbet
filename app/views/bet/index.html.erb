@@ -1,5 +1,5 @@
 <ul>
 <% @bets.each do |bet| %>
-  <li> <%= bet.owner1_id %>, <%= bet.owner2_id %>, <%= bet.beerbet %> </li>
+  <li> <%= bet.owner1.name %>, <%= bet.owner2.name %>, <%= bet.beerbet %> </li>
 <% end %>
 </ul>

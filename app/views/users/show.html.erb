@@ -5,5 +5,13 @@
   <%= @user.name %>
 </p>
 
+<h4>Bets</h4>
+<ul>
+<% @user.bets.each do |bet| %>
+  <li><%= bet.owner1.name %>, <%= bet.owner2.name %>, <%= bet.beerbet %></li>
+<% end %>
+</ul>
+
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
