@@ -1,0 +1,14 @@
+<h1>Create new user</h1>
+
+<%= form_for @bet, url: {action: "create"} do |f| %>
+  <%= f.label :owner1_id, "First Person" %><br/>
+  <%= f.select :owner1_id, options_for_select(User.all.map{|s|[s.name, s.id]}) %><br/>
+
+  <%= f.label :owner2_id, "Second Person" %><br/>
+  <%= f.select :owner2_id, options_for_select(User.all.map{|s|[s.name, s.id]}) %><br/>
+
+  <%= f.label :beerbet, "Beer Bet" %><br/>
+  <%= f.text_area :beerbet %><br/>
+
+  <%= f.submit %>
+<% end %>
